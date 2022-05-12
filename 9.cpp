@@ -9,7 +9,9 @@ int getMinDiff(int arr[], int n, int k) {
         int mi= arr[0];
         int res= ma-mi;
         for(int i=1;i<n;i++){
-
+            if(arr[i]-k<0){
+                continue;
+            }
             ma= max(arr[i-1]+k,arr[n-1]-k);
             mi= min(arr[i]-k,arr[0]+k);
             res= min(ma-mi,res);
