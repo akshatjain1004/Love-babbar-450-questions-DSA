@@ -2,3 +2,4 @@ The important/tough questions are:
 1. Q5(Array)
 2. Q6(Array): sets 
 3. Q9(Array): optimization 
+4. Q10 (Array)
