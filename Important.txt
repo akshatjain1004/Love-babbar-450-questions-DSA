@@ -7,3 +7,4 @@ The important/tough questions are:
 6. Q15 (Array)
 7. Q17 (Array): Easy but interesting
 8. Q18 (Array): Hashing and unordered map
+9. Q24(Array): Hash map soln possible
