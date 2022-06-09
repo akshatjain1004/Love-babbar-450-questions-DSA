@@ -9,3 +9,4 @@ The important/tough questions are:
 8. Q18 (Array): Hashing and unordered map
 9. Q24(Array): Hash map soln possible
 10. Q26(Array): buy2= min(buy2,buy2-pr1)
+11. Q29(Array): interesting concept
