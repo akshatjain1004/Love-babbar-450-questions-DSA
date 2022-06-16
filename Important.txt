@@ -12,3 +12,4 @@ The important/tough questions are:
 11. Q29(Array): interesting concept
 12. Q32(Array)
 13. Q33 (Array): Nice Approach
+14. Q12 (String)
