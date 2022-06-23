@@ -18,3 +18,5 @@ The important/tough questions are:
 17. Q13(Searching and Sorting)
 18. Q14 (Searching and Sorting)
 19. Q15 (Searching and Sorting)
+20. Q17(Searching and Sorting)
+21. Q18 (Searching and Sorting) 
