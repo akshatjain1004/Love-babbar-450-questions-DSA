@@ -12,30 +12,29 @@ int main(int argc, char const *argv[])
     while(t--){
         int n,c;
         cin>>n>>c;
-        vector <int> st;
+        int arr[n];
         for(int i=0;i<n;i++){
-            int r;
-            cin>>r;
-            st.push_back(r);
+            cin>>arr[i];
         }
-        sort(st.begin(),st.end());
-        
-        vector <int> dist;
-        for(int i=i;i<n;i++){
-            dist.push_back(st[i]-st[i-1]);
-        }
-        
-        sort(dist.begin(),dist.end());
-        int ans=0;
-        
-        // for(int i=dist.size()-1;i>=dist.size()-c+1;i--){
-        //     ans+=dist[i];
+        sort(arr,arr+n);
+        // for(int i=0;i<n;i++){
+        //     cout<<arr[i]<<" ";
         // }
-        for(int i=dist.size()-c;i<dist.size();i++){
-            ans+=dist[i];
-            cout<<dist[i]<<" ";
+        int d[n-1];
+        for(int i=1;i<n;i++){
+            d[i-1]= arr[i]-arr[i-1];
         }
-        cout<<ans<<'\n';
-    }
+        sort(d,d+n-1);
+        for(int i=0;i<n-1;i++){
+            cout<<d[i]<<" ";
+        }
+        // int ans=0;
+        // for(int i=n-c-1;i<n-1;i++){
+        //     ans+=d[i];
+        // }
+        cout<<d[n-c];
+        // cout<<ans<<'\n';
+
+    }    
     return 0;
 }
