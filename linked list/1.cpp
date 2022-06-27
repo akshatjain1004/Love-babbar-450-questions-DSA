@@ -62,6 +62,16 @@ void iterReverse(node* &head){
     head= prev;
 }
 
+node* recReverse(node* &head){
+    if(head==NULL || head->next==NULL){
+        return head;
+    }
+    node* newHead= recReverse(head->next);
+    head->next->next= head;
+    head->next= NULL;
+    return newHead;
+}
+
 void show(node* head){
     node* temp= head;
     while(temp->next!=NULL){
@@ -69,7 +79,7 @@ void show(node* head){
         temp=temp->next;
     }
     cout<<temp->data<<"->";
-    cout<<"NULL";
+    cout<<"NULL"<<'\n';
 }
 
 int main(int argc, char const *argv[])
@@ -84,7 +94,8 @@ int main(int argc, char const *argv[])
     }
     iterReverse(head);
     show(head);
-    
-    cout<<'\n'<<head->data;
+    head= recReverse(head);
+    show(head);
+    cout<<head->data;
     return 0;
 }
