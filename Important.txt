@@ -23,4 +23,6 @@ The important/tough questions are:
 22. Q24(Searching and Sorting): Very Very tough
 23. Q1 (Binary Trees): Abstract algorithm
 24. Q4 (Binary Trees): tough question
-25. Q6 (Binary Trees): Abstract Approach
+25. Q6 (Binary Trees): Abstract Approach (Iterative)
+26. Q7 (Binary Trees): ^^
+27. Q8 (Binary Trees)
