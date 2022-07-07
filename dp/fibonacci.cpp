@@ -20,5 +20,21 @@ int main(int argc, char const *argv[])
         cout<<f[n]<<"\n";
     }
     
+    int prev1=0;
+    int prev2=1;
+    if(n<2){
+        cout<<n<<'\n';
+    }
+    else{
+        int curr;
+        for(int i=2;i<=n;i++){
+            curr= prev2+prev1;
+            prev1= prev2;
+            prev2= curr;
+        }
+        cout<<curr<<'\n';
+    }
+    
+
     return 0;
 }
