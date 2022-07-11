@@ -27,6 +27,41 @@ void insert(vector <int>&v,int n){
     }
 }
 
+void dlt(vector <int>&v,int k){
+    int n= v.size();
+    int ind;
+    for(int i=1;i<n;i++){
+        if(v[i]==k){
+            v[i]= v[n-1];
+            ind= i;
+            break;
+        }
+    }
+    v.pop_back();
+    while(ind>=1 && ind<n){
+        int p= ind/2;
+        if(v[ind]< max(v[2*ind],v[2*ind+1])){
+            if(v[2*ind +1]> v[2*ind]){
+                swap(v[ind],v[2*ind+1]);
+                ind= 2*ind+1;
+            }
+            else{
+                swap(v[ind],v[2*ind]);
+                ind= 2*ind;
+            }
+        }
+        if(v[ind]>v[p] && p!=0){
+            swap(v[ind],v[p]);
+            ind=p;
+        }
+        else{
+            return;
+        }
+    }
+    
+
+}
+
 int main(int argc, char const *argv[])
 {
     int n;
@@ -40,6 +75,7 @@ int main(int argc, char const *argv[])
         cin>>r;
         insert(h,r);
     }
+    dlt(h,60);
     for(int i=1;i<h.size();i++){
         cout<<h[i]<<" ";
     }
