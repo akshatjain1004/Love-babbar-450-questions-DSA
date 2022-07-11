@@ -62,6 +62,22 @@ void dlt(vector <int>&v,int k){
 
 }
 
+void heapify(int ind, vector<int>&v,int n){
+    while(ind<=n){
+        if(v[ind]< max(v[2*ind], v[2*ind +1])){
+            if(v[2*ind]>v[2*ind +1]){
+                swap(v[ind],v[2*ind]);
+                ind= 2*ind;
+            }
+            else{
+                swap(v[ind],v[2*ind+1]);
+                ind= 2*ind+1;
+            }
+        }
+    }
+}
+
+
 int main(int argc, char const *argv[])
 {
     int n;
@@ -79,5 +95,6 @@ int main(int argc, char const *argv[])
     for(int i=1;i<h.size();i++){
         cout<<h[i]<<" ";
     }
+    
     return 0;
 }
